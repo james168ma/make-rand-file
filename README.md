@@ -1,6 +1,7 @@
 # makeRandFile
 A command line tool that makes a file of random characters of a specified size
 
+```
 usage: makeRandFile [OPTION]... SIZE
 
 Make a random file of printable characters of size SIZE
@@ -19,4 +20,4 @@ optional arguments:
   -u, --uppercase       file of only uppercase letters
   -l, --lowercase       file of only lowercase letters
   -p, --punctuation     file of only punctuation characters
-
+```
