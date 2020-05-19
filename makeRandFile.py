@@ -7,9 +7,12 @@ Program to make random files of a disired size!
 import random, sys, string
 from argparse import ArgumentParser
 
+# Usage Message
+def msg(name=None):
+    return '''makeRandFile [OPTION]... SIZE'''
 def main():
 
-    parser = ArgumentParser(description='''Make a random file of printable characters of size SIZE''')
+    parser = ArgumentParser(description='''Make a random file of printable characters of size SIZE''', usage=msg())
     parser.add_argument("SIZE", type=int, help="size of file in bytes")
     parser.add_argument("-o", "--output-file", type=str, help="write contents into OUTPUT_FILE")
  
@@ -20,10 +23,10 @@ def main():
     type_group = parser.add_mutually_exclusive_group()
     type_group.add_argument("-d", "--digits", action="store_true", help="file of only random digits")
     type_group.add_argument("-L", "--letters", action="store_true", help="file of only random letters")
-    type_group.add_argument("-p", "--punctuation", action="store_true", help="file of only punctuation characters")
     type_group.add_argument("-u", "--uppercase", action="store_true", help="file of only uppercase letters")
-    type_group.add_argument("-l", "--lowercase", action="store_true", help="file of only lowercase letters")
-    
+    type_group.add_argument("-l", "--lowercase", action="store_true", help="file of only lowercase letters") 
+    type_group.add_argument("-p", "--punctuation", action="store_true", help="file of only punctuation characters")
+   
     args = parser.parse_args()
 
     if args.SIZE < 0:
