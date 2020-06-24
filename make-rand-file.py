@@ -9,7 +9,9 @@ from argparse import ArgumentParser
 
 # Usage Message
 def msg(name=None):
-    return '''makeRandFile [OPTION]... SIZE'''
+    return '''make-rand-file [OPTION]... SIZE'''
+
+
 def main():
 
     parser = ArgumentParser(description='''Make a random file of printable characters of size SIZE''', usage=msg())
