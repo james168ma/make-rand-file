@@ -2,7 +2,7 @@
 A command line tool that makes a file of random characters of a specified size
 
 ```
-usage: makeRandFile [OPTION]... SIZE
+usage: make-rand-file [OPTION]... SIZE
 
 Make a random file of printable characters of size SIZE
 
